@@ -7,14 +7,13 @@ using System.Web.Http;
 using WeatherApiWrapper;
 using System.Web.Script.Serialization;
 using System.Json;
-using System.Web.Mvc;
 
 namespace ApiApplication.Controllers
 {
     public class WeatherApiController : ApiController
     {
         /// <summary>
-        /// Gets and returns a json object form of WeatherApiResponse object from WeatherApi wrapper
+        /// Gets WeatherApiResponse object and returns it as a json object
         /// </summary>
         /// <returns>Json object in HttpResponseMessage</returns>
         public HttpResponseMessage Get()
