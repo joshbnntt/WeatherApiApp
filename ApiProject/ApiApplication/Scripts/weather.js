@@ -1,4 +1,7 @@
-﻿$(".currenttime").each(function () {
+﻿//--------------------
+// Format Data
+//--------------------
+$(".currenttime").each(function () {
     var date, formatedDate;
     date = new Date(Number($(this).text()) * 1000);
     formatedDate = date;
@@ -12,6 +15,9 @@ $(".rainIntensity").each(function () {
     $(this).replaceWith(rain);
 });
 
+//--------------------
+// Nav
+//--------------------
 $('.nav').on('click', '#minutelyPill', function (e) {
     e.preventDefault();
     $('#minutely').show();
@@ -21,6 +27,7 @@ $('.nav').on('click', '#minutelyPill', function (e) {
     $('#hourlyPill').attr('class', '');
     $('#dailyPill').attr('class', '');
 });
+
 $('.nav').on('click', '#hourlyPill', function (e) {
     e.preventDefault();
     $('#minutely').hide();
@@ -30,6 +37,7 @@ $('.nav').on('click', '#hourlyPill', function (e) {
     $('#hourlyPill').attr('class', 'active');
     $('#dailyPill').attr('class', '');
 });
+
 $('.nav').on('click', '#dailyPill', function (e) {
     e.preventDefault();
     $('#minutely').hide();
@@ -38,4 +46,11 @@ $('.nav').on('click', '#dailyPill', function (e) {
     $('#minutelyPill').attr('class', '');
     $('#hourlyPill').attr('class', '');
     $('#dailyPill').attr('class', 'active');
+});
+
+//--------------------
+// Page Refresh
+//--------------------
+$(".refresh").on('click', function () {
+    window.location.reload();
 });

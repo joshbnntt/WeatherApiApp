@@ -10,32 +10,30 @@
     <link rel="stylesheet" href="<%= Url.Content("~/Content/bootstrap/css/bootstrap.css") %>" />
     <link rel="stylesheet" href="<%= Url.Content("~/Content/bootstrap/css/bootstrap-theme.min.css") %>" />
     <link rel="stylesheet" href="<%= Url.Content("~/Content/weather-icons-master/css/weather-icons.css") %>" />
-    <style>
-        .thumbnail {
-            height:300px;
-            padding:10px;
-        }
-    </style>
+    <link rel="stylesheet" href="<%= Url.Content("~/Content/Site.css") %>" />
            
 </head>
 <body>
     <div class="container">
-        <div class="row"  style="margin-top:50px;">
-            <div class="col-md-3 col-md-offset-1">
-                <h1>Pensacola, FL</h1>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="btn btn-default navbar-btn refresh"><i class="glyphicon glyphicon-repeat"></i></button>
+                    <span class="navbar-brand">Pensacola, FL</span>
+                </div>
             </div>
-        </div>
+        </nav>
         <% if(Model != null) { %>
             <% if (Model.alerts != null) { %>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-5 global-alerts">
                     <% for(int i = 0; i < Model.alerts.Count; i++) { %>
                       <div class="alert alert-danger" role="alert">
                           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <div class="row">
                             <p><strong><%: Html.DisplayFor(modelItem => Model.alerts[i].title)%></strong></p>
                             <p class="currenttime"><%: Html.DisplayFor(modelItem => Model.alerts[i].expires)%></p>
-                            <p><%: Html.DisplayFor(modelItem => Model.alerts[i].description)%></p>
+                            <%--<p><%: Html.DisplayFor(modelItem => Model.alerts[i].description)%></p>--%>
                         </div>  
                       </div>
                     <% } %>
@@ -45,12 +43,13 @@
 
             <%-- begin currently --%>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-2 current-weather">
                     <div class="row">
                         <div class="thumbnail">
+                            <h1>Right Now</h1>
                             <i class="wi <%= Html.DisplayFor(modelItem => Model.currently.icon) %>"></i>
                             <div class="caption">
-                            <h3 class="currenttime"><%: Html.DisplayFor(modelItem => Model.currently.time) %></h3>
+                            <i class="glyphicon glyphicon-time" style="font-size:14pt;"></i><h3 class="currenttime"><%: Html.DisplayFor(modelItem => Model.currently.time) %></h3>
                             <p><%: Html.DisplayFor(modelItem => Model.currently.summary) %></p>
                                 <p><strong>Temperature: </strong><%: Html.DisplayFor(modelItem => Model.currently.temperature) %><i class="wi wi-fahrenheit"></i></p> 
                                 <p><strong>Chance of Rain: </strong><%: Html.DisplayFor(modelItem => Model.currently.precipProbability) %></p>                       
@@ -60,7 +59,7 @@
                 </div>
             </div> <%--end currently--%>
             <div class="row" style="margin-top:25px;">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-10 col-md-offset-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="row">
