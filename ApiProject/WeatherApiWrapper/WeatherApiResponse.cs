@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
-
+ 
 namespace WeatherApiWrapper
 {
-    [DataContract]
+    [DataContract] 
     public class WeatherApiResponse
     {
         [DataMember]

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApiWrapper", "ClassLibrary1\WeatherApiWrapper.csproj", "{6F091DB1-F1BE-463E-A21E-CEA8CAA530D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApiWrapper", "WeatherApiWrapper\WeatherApiWrapper.csproj", "{6F091DB1-F1BE-463E-A21E-CEA8CAA530D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiApplication", "MvcApplication1\ApiApplication.csproj", "{3FAAD997-E9D9-4234-979E-401C161750D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiApplication", "ApiApplication\ApiApplication.csproj", "{3FAAD997-E9D9-4234-979E-401C161750D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

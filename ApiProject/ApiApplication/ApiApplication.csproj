@@ -328,7 +328,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\WeatherApiWrapper.csproj">
+    <ProjectReference Include="..\WeatherApiWrapper\WeatherApiWrapper.csproj">
       <Project>{6f091db1-f1be-463e-a21e-cea8caa530d0}</Project>
       <Name>WeatherApiWrapper</Name>
     </ProjectReference>
